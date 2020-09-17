@@ -1,6 +1,7 @@
 #include <stdio.h>
+#include "Estructura.h"
 
-void capturar_enteros()
+void capturar_enteros() // Función capturar_enteros
 {
     int enteros[5];
     int promedio = 0;
@@ -24,7 +25,7 @@ void capturar_enteros()
     printf("Promedio: %.2f \n",suma/5.0); // Imprime el promedio de los enteros
 }
 
-void mostrar(int muestra, char cadena[])
+void mostrar(int muestra, char cadena[]) // Función mostrar
 {
     for (size_t i = 0; i < muestra; i++)
     {
@@ -63,10 +64,10 @@ int main() //Función Principal
             mostrar(muestra, cadena);
             break;
             case '3':
-            /* code */
+            capturar_personajes();
             break;
             case '4':
-            /* code */
+            mostrar_personajes();
             break;
         
         default:
