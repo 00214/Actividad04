@@ -24,6 +24,15 @@ void capturar_enteros()
     printf("Promedio: %.2f \n",suma/5.0); // Imprime el promedio de los enteros
 }
 
+void mostrar(int muestra, char cadena[])
+{
+    for (size_t i = 0; i < muestra; i++)
+    {
+        printf("%s",cadena);
+    }
+    
+}
+
 int main() //Función Principal
 {
     char opcion;
@@ -46,7 +55,12 @@ int main() //Función Principal
             capturar_enteros();
             break;
         case '2':
-            /* code */
+            printf("Escribe lo que quieras decir en tu cadena: ");
+            fflush(stdin);
+            fgets(cadena,sizeof(cadena), stdin);
+            printf("\nCuantas veces quieres que se imprima tu cadena: ");
+            scanf("%i",&muestra);
+            mostrar(muestra, cadena);
             break;
             case '3':
             /* code */
